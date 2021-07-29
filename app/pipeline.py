@@ -17,5 +17,5 @@ test_score_log = round(logistic_model.score(X_test, y_test),2)
 
 print(test_score_log)
 # save the model to disk
-filename = 'finalized_model.sav'
-pickle.dump(model, open(filename, 'wb'))
+
+pickle.dump(logistic_model, open(FILENAME_MODEL, 'wb'))
