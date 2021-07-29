@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-def clean_data(data_string)
+def clean_data(data_string):
 # Import Data
     data = pd.read_csv(data_string)
 # Choose necessary colums

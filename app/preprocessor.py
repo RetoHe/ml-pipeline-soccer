@@ -6,10 +6,10 @@ from sklearn.preprocessing import MinMaxScaler, RobustScaler, LabelEncoder, OneH
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import FeatureUnion
 
-def preprocess_data(data)
+def preprocess_data(dataframe):
 # import data
     #data = pd.read_csv("data/soccerdata_cleaned.csv")
-    data = data.copy()
+    data = dataframe.copy()
 # encode Output Variable
     data["FTR"] = data["FTR"].replace("H", 1)
     data["FTR"] = data["FTR"].replace("D", 2)
