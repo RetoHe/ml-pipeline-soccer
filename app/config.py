@@ -1,2 +1,2 @@
 # data
-FILE_PATH_DATA = "../data/soccerdata.csv"
+FILE_PATH_DATA = "./data/soccerdata.csv"
