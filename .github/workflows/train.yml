@@ -32,11 +32,8 @@ jobs:
         
       - name: step 2 - Add artifacts to publish to the temp folder
         run: 
-          mv finalized_model.sav downloads
+          mv finalized_model.sav /downloads
           cd downloads
-          echo 'alpha'    > alpha.html
-          echo 'bravo'    > bravo.html
-          echo 'charlie'  > charlie.html
           cd ..
     
       - name: Step 3 - Use the Upload Artifact GitHub Action
