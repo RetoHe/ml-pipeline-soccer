@@ -28,10 +28,11 @@ jobs:
       - name: Step 1 - Create a temporary artifact downloads folder
         run: 
           mkdir downloads
-          mv finalized_model.sav downloads
+          
         
       - name: step 2 - Add artifacts to publish to the temp folder
-        run: |
+        run: 
+          mv finalized_model.sav downloads
           cd downloads
           echo 'alpha'    > alpha.html
           echo 'bravo'    > bravo.html
