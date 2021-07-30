@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: cml_run
+      - name: run model pipeline
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -26,7 +26,9 @@ jobs:
           python ./app/pipeline.py
 
       - name: Step 1 - Create a temporary artifact downloads folder
-        run: mkdir downloads
+        run: 
+          mkdir downloads
+          mv finalized_model.sav downloads
         
       - name: step 2 - Add artifacts to publish to the temp folder
         run: |
