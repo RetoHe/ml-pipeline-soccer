@@ -21,18 +21,18 @@ jobs:
           
           # install requirements
           pip install -r requirements.txt
-          
+          mkdir downloads
           # run Data Preparation
           python ./app/pipeline.py
 
-      - name: Step 1 - Create a temporary artifact downloads folder
-        run: 
-          mkdir downloads
+      #- name: Step 1 - Create a temporary artifact downloads folder
+        #run: 
+         # mkdir downloads
           
         
-      - name: step 2 - Add artifacts to publish to the temp folder
-        run: 
-          mv finalized_model.sav /downloads
+      #- name: step 2 - Add artifacts to publish to the temp folder
+       # run: 
+         # mv finalized_model.sav /downloads
           #cd downloads
           #cd ..
     
